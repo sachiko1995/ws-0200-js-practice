@@ -54,9 +54,12 @@ console.log(lastChar('Hungry'))
  *
  */
 
-function substring(str, a, b) {
-  
-}
+// function substring(str, a, b) {
+//   const str = ""
+//   return str.substring(a, b)
+// }
+
+// console.log(substring("Shimokita", 2, 3))
 
 /**
  *  4.6 引数に与えられた二つの引数のうち、一つ目の引数の文字列に二つ目の引数の文字列が
@@ -70,7 +73,15 @@ function substring(str, a, b) {
  * */
 
 function isInclude(a, b) {
+  if(a.includes(b)) {
+    return true
+  } else {
+    return false
+  }
 }
+
+console.log(isInclude("workplace", "work"))
+console.log(isInclude("hogegeho", "fugafuga"))
 
 /**
  *  4.7 引数で渡された文字列を一文字ずつ表示するメソッドを実装してください
@@ -84,7 +95,12 @@ function isInclude(a, b) {
  */
 
 function printByChar(str) {
+  for(let i = 0; i < str.length; i++) {
+    console.log(str.charAt(i))
+  }
 }
+
+console.log(printByChar("Harry Potter"))
 
 
 module.exports = {
