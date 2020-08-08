@@ -55,6 +55,7 @@ console.log(lastChar('Hungry'))
  */
 
 function substring(str, a, b) {
+  
 }
 
 /**
