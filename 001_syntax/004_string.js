@@ -4,7 +4,10 @@
  */
 
 function length(str) {
+  return str.length
 }
+
+console.log(length("aiueo"))
 
 /**
  *  4.2 文字列のながさが偶数の場合にtrueを返却するメソッドを実装してください
@@ -12,7 +15,15 @@ function length(str) {
  */
 
 function lengthIsEven(str) {
+  isEven = str.length % 2;
+  if(isEven === 0) {
+    return true
+  } else {
+    return false
+  }
 }
+
+console.log(lengthIsEven("Daniel"))
 
 /**
  *  4.3 文字列の先頭一文字目を返却するメソッドを実装してください
@@ -20,7 +31,11 @@ function lengthIsEven(str) {
  */
 
 function firstChar(str) {
+  return str.substr(0,1)
 }
+
+console.log(firstChar("Daniel Wellinton"))
+
 
 /**
  *  4.4 文字列の末尾一文字目を返却するメソッドを実装してください

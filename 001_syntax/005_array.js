@@ -4,7 +4,10 @@
  */
 
 function printArray(array) {
+  return array // 多分、こういうことじゃない
 }
+
+console.log(printArray(['Daniel', 'Wellington']))
 
 /**
  *  5.2 関数内で全ての曜日を配列として宣言して返却するメソッドを実装してください
@@ -22,7 +25,12 @@ function printArray(array) {
  *
  */
 function getDays() {
+  var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+
+  return days // おそらく、こういうことじゃない
 }
+
+console.log(getDays())
 
 /**
  *  5.3 配列に特定の数があった場合にtrue、そうでない場合にfalseを返す関数を実装してください
@@ -35,6 +43,7 @@ function getDays() {
  */
 
 function findNum(array, num) {
+
 }
 
 /**

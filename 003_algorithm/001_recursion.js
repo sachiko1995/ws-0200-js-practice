@@ -11,7 +11,14 @@
  */
 
 function sumSequence (n, sum = 0) {
-}
+  for(let i=0; i = n.length; i++){
+    sum += i;
+  }
+  return sum;
+  }
+
+
+console.log(sumSequence())
 
 /**
  *  フィボナッチ数

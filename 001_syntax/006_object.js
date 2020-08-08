@@ -8,8 +8,15 @@
  */
 
 function getPersonObject() {
+  const bobInfo = {
+    name: 'Bob',
+    age: ' 32',
+    gender: 'male'
+  }
+  return (bobInfo.name + " " + bobInfo.age + " " + bobInfo.gender)
 }
 
+console.log(getPersonObject())
 /**
  *  6.2 下記データAが引数で与えられた場合にデータBに書き換える関数を実装してください。
  *
@@ -25,7 +32,9 @@ function getPersonObject() {
  */
 
 function mutateObject(person) {
+  
 }
+
 
 /**
  *  6.3 下記引数で渡される配列にランダムな1 ~10の数字を割り振り、オブジェクトとして返す
@@ -49,15 +58,6 @@ function mutateObject(person) {
  */
 
 function assignNumber(persons) {
-<<<<<<< HEAD
-=======
-  let obj = {};
-  for (let i = 0; i < persons.length; i++) {
-    const rand = Math.floor((Math.random() * 10) + 1);
-    obj[persons[i]] = rand;
-  }
-  return obj;
->>>>>>> develop
 }
 
 /**
@@ -72,17 +72,6 @@ function assignNumber(persons) {
  */
 
 function isDuplicate(array) {
-<<<<<<< HEAD
-=======
-  numMap = {};
-  for (let i = 0; i < array.length; i++) {
-    if (numMap[array[i]]) {
-      return true;
-    }
-    numMap[array[i]] = true;
-  }
-  return false;
->>>>>>> develop
 }
 
 module.exports = {
