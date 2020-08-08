@@ -33,6 +33,7 @@ getPersonObject()
 
 function mutateObject(person) {
   
+  
 }
 
 /**
@@ -57,6 +58,8 @@ function mutateObject(person) {
  */
 
 function assignNumber(persons) {
+  persons = ['Bob', 'Mary', 'Ann', 'Mike']
+
 }
 
 /**
@@ -71,6 +74,7 @@ function assignNumber(persons) {
  */
 
 function isDuplicate(array) {
+  
 }
 
 module.exports = {
