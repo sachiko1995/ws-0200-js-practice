@@ -1,8 +1,33 @@
 const { logMock } = require('../index');
 const {
   printMessageByAge,
-  greeding
+  greeding,
+  getDay // ←追記
 } = require('../../001_syntax/002_condition');
+describe('getDay', () => {
+  let outputs = [];
+  beforeEach(() => {
+    outputs = []
+    console.log = logMock(outputs)
+  });
+  test('任意の曜日', () => {
+    for (let i = 0; i < 7; i++) {
+      getDay(i)
+    }
+    expect(outputs[0]).toEqual('Sunday');
+    expect(outputs[1]).toEqual('Monday');
+    expect(outputs[2]).toEqual('Tuesday');
+    expect(outputs[3]).toEqual('Wednesday');
+    expect(outputs[4]).toEqual('Thursday');
+    expect(outputs[5]).toEqual('Friday');
+    expect(outputs[6]).toEqual('Saturday');
+  });
+  test('存在しない添字', () => {
+    getDay(7)
+    expect(outputs.length).toEqual(0);
+  });
+});
+
 
 const origin = console.log;
 afterEach(() => (console.log = origin));

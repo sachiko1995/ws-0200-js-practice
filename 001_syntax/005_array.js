@@ -25,7 +25,7 @@ console.log(printArray(['Daniel', 'Wellington']))
  *
  */
 function getDays() {
-  var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+  let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
   return days 
 }
@@ -53,7 +53,8 @@ function findNum(array, num) {
   return false
 }
 
-findNum([1, 2, 3] , 1)
+console.log(findNum([1, 2, 3] , 1))
+console.log(findNum([1, 2, 3] , 4))
 
 /**
  *  5.4 配列に重複した要素があれば、true、そうでなければfalseを返す関数を実装してください
@@ -66,19 +67,19 @@ findNum([1, 2, 3] , 1)
  */
 
 function isDuplicate(array) {
-  for(let i=0; i < array.length; i++) {
-    if(array.includes(num, num)){
-      return true
-    } else {
-      return false
-    }
-  }
-  return false
+  // for(let i=0; i < array.length; i++) {
+  //   if(array[i] ==){
+  //     return true
+  //   } else {
+  //     return false
+  //   }
+  // }
+  // return false
 }
 
-isDuplicate([1,2,3])
-isDuplicate([1,2,2,3])
-isDuplicate([])
+console.log(isDuplicate([1,2,3]))
+console.log(isDuplicate([1,2,2,3]))
+console.log(isDuplicate([]))
 
 module.exports = {
   printArray,

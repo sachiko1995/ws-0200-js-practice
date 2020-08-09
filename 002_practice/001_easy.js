@@ -5,14 +5,21 @@
  *  lengthをも使わずに引数で渡された文字列の長さを求める関数を定義してください
  *
  *  example:
- *    [1, 3, 7, 9] => output: 20
- *    [2, 5, 3] => output: 10
- *    [1] => output: 1
+ *    'banana' => output: 5
+ *    'cucumber' => output: 8
+ *    '' => output: 0
  *
  */
 
 function length(str) {
+  for(let i=0; i < str.length; i++) {
+    if(str == "") {
+      return "output: 0"
+    } 
+  }
 }
+
+console.log(length(""))
 
 /**
  *  文字列の反転
@@ -26,7 +33,21 @@ function length(str) {
  *
  */
 function reverse(str) {
+  const array = [];
+  for (let i=0; i = str.length; i++) {
+    const char = str.charAt(i);
+    array.push(char);
+  }
+
+  let reversed = '';
+  for(let i=0; i < array.length; i++) {
+    const popped = array.pop();
+    reversed += popped;
+  }
+  return reversed
 }
+
+console.log(reverse('sachiko'))
 
 /**
  *  指定された文字列の位置を返却
