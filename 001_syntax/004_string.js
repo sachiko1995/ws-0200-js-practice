@@ -54,12 +54,11 @@ console.log(lastChar('Hungry'))
  *
  */
 
-// function substring(str, a, b) {
-//   const str = ""
-//   return str.substring(a, b)
-// }
+function substring(str, a, b) {
+  return str.substring(a-1, b)
+}
 
-// console.log(substring("Shimokita", 2, 3))
+console.log(substring("Shimokita", 2, 5))
 
 /**
  *  4.6 引数に与えられた二つの引数のうち、一つ目の引数の文字列に二つ目の引数の文字列が

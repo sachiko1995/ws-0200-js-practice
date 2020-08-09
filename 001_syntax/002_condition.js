@@ -8,14 +8,14 @@
 function printMessageByAge(age) {
 
   if(age >= 20){
-    return '成年です。'
+    console.log('成年です。')
   } else {
-    return '未成年です。'
+    console.log('未成年です。')
   }
 }
 
-console.log(printMessageByAge(30))
-console.log(printMessageByAge(18))
+// printMessageByAge(30)
+// printMessageByAge(18)
 
 /**
  *  2.2 引数から与えられた時間が
@@ -26,18 +26,18 @@ console.log(printMessageByAge(18))
  *
  */
 function greeding(hour) {
-  if(hour > 4 && hour < 12){
-    return 'Good Morning'
-  } else if(hour > 12 && hour < 17){
-    return 'Hello'
+  if(hour >= 4 && hour < 12){
+    console.log('Good Morning')
+  } else if(hour >= 12 && hour < 17){
+    console.log('Hello')
   } else {
-    return 'Good Night'
+    console.log('Good Night')
   }
 }
 
-console.log(greeding(5))
-console.log(greeding(14))
-console.log(greeding(18))
+// greeding(5)
+// greeding(14)
+// greeding(18)
 
 /**
  *  2.3 引数から与えられた数字に対応する曜日を返却するメソッドを実装してください
@@ -83,8 +83,6 @@ function getDay(day) {
       break;
   }
 }
-
-getDay(4)
 
 module.exports = {
   printMessageByAge,

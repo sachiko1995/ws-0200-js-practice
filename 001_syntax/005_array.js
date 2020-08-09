@@ -4,7 +4,7 @@
  */
 
 function printArray(array) {
-  return array.toString() // 多分、こういうことじゃない
+  return array.toString() 
 }
 
 console.log(printArray(['Daniel', 'Wellington']))
@@ -27,7 +27,7 @@ console.log(printArray(['Daniel', 'Wellington']))
 function getDays() {
   var days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
-  return days // おそらく、こういうことじゃない
+  return days 
 }
 
 console.log(getDays())
@@ -50,6 +50,7 @@ function findNum(array, num) {
       return false
     }
   }
+  return false
 }
 
 findNum([1, 2, 3] , 1)
@@ -65,7 +66,19 @@ findNum([1, 2, 3] , 1)
  */
 
 function isDuplicate(array) {
+  for(let i=0; i < array.length; i++) {
+    if(array.includes(num, num)){
+      return true
+    } else {
+      return false
+    }
+  }
+  return false
 }
+
+isDuplicate([1,2,3])
+isDuplicate([1,2,2,3])
+isDuplicate([])
 
 module.exports = {
   printArray,

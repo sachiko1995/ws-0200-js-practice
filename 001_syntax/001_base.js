@@ -15,10 +15,10 @@ helloWorld();
  */
 function displayConst() {
   const x = "hoge";
-  return x;
+  console.log(x)
 }
 
-console.log(displayConst());
+displayConst()
 
 /**
  *  1.3 let を使って"hoge"という文字列を定義した変数を定義し、それを出力する関数を定義してください
@@ -26,20 +26,20 @@ console.log(displayConst());
  */
 function displayLet() {
   let y = "hoge";
-  return y
+  console.log(y)
 }
 
-console.log(displayLet());
+displayLet()
 
 /**
  *  1.4 引数に渡した変数を表示するメソッドを実装してください
  *
  */
 function displayArgument(arg) {
-  console.log()
+  console.log(arg)
 }
 
-
+displayArgument("hoge")
 
 /**
  *  1.5 渡された二つの引数の合計を返却するメソッドを実装してください
@@ -50,7 +50,7 @@ function sumTwoArgs(a, b) {
   return sum
 }
 
-console.log(sumTwoArgs(2, 3));
+// console.log(sumTwoArgs(2, 3));
 
 /**
  *  1.6 渡された二つの引数の差を返却するメソッドを実装してください
@@ -61,18 +61,23 @@ function subtractTwoArgs(a, b) {
   return subtract;
 }
 
-console.log(subtractTwoArgs(9, 3));
+// console.log(subtractTwoArgs(9, 3));
 
 /**
  *  1.7 渡された二つの引数の商を返却するメソッドを実装してください。0での割り算はnullを返却してください。
  *
  */
 function quotientTwoArgs(a, b) {
-  let quotient = a / b;
-  return quotient
+  if(b == 0) {
+    return null
+  }else {
+    let quotient = Math.floor(a / b);
+    return quotient
+  }
+  
 }
 
-console.log(quotientTwoArgs(7, 3));
+// console.log(quotientTwoArgs(7, 3));
 
 /**
  *  1.8 渡された二つの引数の積を返却するメソッドを実装してください
@@ -84,7 +89,7 @@ function productTwoArgs(a, b) {
   return product
 }
 
-console.log(productTwoArgs(3, 3));
+// console.log(productTwoArgs(3, 3));
 
 /**
  *  1.9 渡された引数の2で割ったあまりを返却するメソッドを実装してください
@@ -104,15 +109,15 @@ function isEven(a) {
   let evenNum = a % 2;
 
   if(evenNum === 0){
-    return "This is Even" 
+    return true 
   } else {
-    return "This is not Even"
+    return false
   }
 
 }
 
-console.log(isEven(4));
-console.log(isEven(19));
+// console.log(isEven(4));
+// console.log(isEven(19));
 
 /**
  *  1.11 渡された二つの文字列を連結するメソッドを実装してください
