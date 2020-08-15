@@ -63,7 +63,7 @@ console.log(findNum([], 5))
 
 function isDuplicate(array) {
   for(let i=0; i < array.length; i++) {
-    if(array[i] == array[i+1]) {
+    if(array.indexOf([i]) == array.indexOf([i+1])) {
       return true
     } else {
       return false

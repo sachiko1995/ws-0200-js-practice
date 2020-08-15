@@ -10,7 +10,10 @@
  *
  */
 function rotate(str, num) {
+  
 }
+
+
 
 /**
  *  母音を除いた文字列
@@ -24,7 +27,13 @@ function rotate(str, num) {
  *
  */
 function removeVowels(str) {
+  let vowel = ["a", "i", "u", "e", "o"]
+  if(str.includes(vowel)) {
+    return str.remove(vowel)
+  }
 }
+
+console.log(removeVowels("library"))
 
 /**
  *  文字列のカウント

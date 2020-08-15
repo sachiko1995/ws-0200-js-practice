@@ -11,15 +11,19 @@
  *
  */
 
-// function length(str) {
-//   for(let i=0; i < str.length; i++) {
-//     if(str === undefined || str === "") {
-//       return 0
-//     }
-//   }
-// }
+function length(str) {
+  // if(str === undefined) {
+  //   return 0
+  // } else {
+  //     return str.length
+  //   }
+  
+  
+}
 
-// console.log(length(""))
+console.log(length(""))
+console.log(length("banana"))
+console.log(length("cucumber"))
 
 /**
  *  文字列の反転
@@ -41,7 +45,7 @@ function reverse(str) {
   return arr2.join("")
 }
 
-console.log(reverse("okihcas"))
+console.log(reverse("library"))
 
 /**
  *  指定された文字列の位置を返却
