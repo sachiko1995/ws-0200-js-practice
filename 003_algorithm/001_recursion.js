@@ -11,14 +11,16 @@
  */
 
 function sumSequence (n, sum = 0) {
-  for(let i=0; i = n.length; i++){
-    sum += i;
+  if(n <= 1) {
+    return 1
+  } else {
+   return n + sumSequence(n-1) + sum
   }
-  return sum;
-  }
+}
 
 
-console.log(sumSequence())
+console.log(sumSequence(3))
+console.log(sumSequence(10))
 
 /**
  *  フィボナッチ数

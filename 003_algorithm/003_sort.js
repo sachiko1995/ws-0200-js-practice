@@ -9,7 +9,20 @@
  */
 
 function bubbleSort (array) {
+  for(let i=0; i < array.length; i++) {
+    for(let j=array.length-1; j > i; j--) {
+      if(array[j] < array[j-1]) {
+        let swap = array[j]
+        array[j] = array[j-1]
+        array[j-1] = swap
+      }
+    }
+  }
+  return array
 }
+
+console.log(bubbleSort([1, 3, 2, 4, 5]))
+console.log(bubbleSort([5, 3, 2, 1]))
 
 /**
  *  2.2.2 挿入ソート

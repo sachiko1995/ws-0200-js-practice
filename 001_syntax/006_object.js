@@ -32,8 +32,16 @@ console.log(getPersonObject())
  */
 
 function mutateObject(person) {
-  
+  let obj2 = {
+    name: 'Mary',
+    age: 37,
+    gender: 'female'
+  }
+  const obj3 = Object.assign(person, obj2)
+  return obj3
 }
+
+console.log(mutateObject(getPersonObject()))
 
 
 
@@ -60,12 +68,13 @@ function mutateObject(person) {
  */
 
 function assignNumber(persons) {
-  for(let i=0; i < persons.length; i++) {
-    return persons[i] + "[" + Math.floor((Math.random() * 10) + 1) + "]"
+  for(let i = 0; i < persons.length; i++) {
+    let person = new Object();
+    person.name = persons[i]
+    person.num = "[" + Math.floor(((Math.random() * 10 )+ 1)) + "]"
+    return person
   }
-
 }
-
 console.log(assignNumber(['Bob', 'Mary', 'Ann', 'Mike']))
 
 /**
@@ -80,8 +89,11 @@ console.log(assignNumber(['Bob', 'Mary', 'Ann', 'Mike']))
  */
 
 function isDuplicate(array) {
+  let nums = new Array(array)
   
 }
+
+console.log(isDuplicate([1,2,3]))
 
 module.exports = {
   getPersonObject,

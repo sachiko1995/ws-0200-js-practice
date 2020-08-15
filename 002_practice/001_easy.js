@@ -11,15 +11,15 @@
  *
  */
 
-function length(str) {
-  for(let i=0; i < str.length; i++) {
-    if(str == "") {
-      return "output: 0"
-    } 
-  }
-}
+// function length(str) {
+//   for(let i=0; i < str.length; i++) {
+//     if(str === undefined || str === "") {
+//       return 0
+//     }
+//   }
+// }
 
-console.log(length(""))
+// console.log(length(""))
 
 /**
  *  文字列の反転
@@ -34,20 +34,14 @@ console.log(length(""))
  */
 function reverse(str) {
   const array = [];
-  for (let i=0; i = str.length; i++) {
-    const char = str.charAt(i);
-    array.push(char);
+  for (let i=0; i < str.length; i++) {
+    array.push(str[i])
   }
-
-  let reversed = '';
-  for(let i=0; i < array.length; i++) {
-    const popped = array.pop();
-    reversed += popped;
-  }
-  return reversed
+  let arr2 = array.reverse()
+  return arr2.join("")
 }
 
-console.log(reverse('sachiko'))
+console.log(reverse("okihcas"))
 
 /**
  *  指定された文字列の位置を返却
@@ -62,7 +56,20 @@ console.log(reverse('sachiko'))
  */
 
 function findIndex(str, char) {
+  let finding = [];
+  for(let i=0; i < str.length; i++) {
+    let character = str.charAt(i)
+    finding.push(character)
+  }
+
+  const answer = finding.indexOf(char)
+  return answer
 }
+
+console.log(findIndex("library", "a"))
+console.log(findIndex("bicycle", "a"))
+
+
 
 /**
  *  指定された文字列を指定された文字で分割
@@ -76,8 +83,12 @@ function findIndex(str, char) {
  *
  */
 
-function split(a, b) {
-}
+// function split(a, b) {
+//   const answer = a.split('', b)
+//   return answer;
+// }
+
+// console.log('library', a)
 
 /**
  *  配列の合計
@@ -92,7 +103,20 @@ function split(a, b) {
  */
 
 function sum(array) {
+  const arr = [];
+  for (let i=0; i < array.length; i++) {
+    arr.push(array[i])
+    // console.log(arr)
+  }
+
+  let sumsum = 0;
+  for(let i=0; i < arr.length; i++) {
+    sumsum += arr[i]
+  }
+  return sumsum
 }
+
+console.log(sum([2,3]))
 
 /**
  *  配列の平均
@@ -108,8 +132,14 @@ function sum(array) {
  *
  */
 
-function average(array) {
-}
+// function average(array) {
+//   const arr = [];
+//   for (let i=0; i < array.length; i++) {
+//     arr.push(i)
+//     console.log(arr)
+//   }
+
+// }
 
 /**
  *  配列の結合
@@ -124,7 +154,12 @@ function average(array) {
  */
 
 function concat(a, b) {
+  const arr1 = a.concat(b)
+  return arr1
 }
+
+console.log(concat([1,3,7,9], [3,4]))
+console.log(concat([],[]))
 
 /**
  *  2.1.2 配列の個数
@@ -139,7 +174,14 @@ function concat(a, b) {
  */
 
 function size(array) {
+  const arr1 = [];
+  for(let i=0; i < array.length; i++) {
+    arr1.push(array[i])
+  }
+  return arr1.length
 }
+
+console.log(size([1,3,5,6,7]))
 
 /**
  *  2.1.3 配列の最大値と最小値
@@ -155,7 +197,16 @@ function size(array) {
  */
 
 function minMax(array) {
+  if(array == []){
+    return ""
+  } else {
+    return "max: " + Math.max(...array) + ", " + "min: " + Math.min(...array)
+  }
 }
+
+console.log(minMax([1, 3, 7, 9]))
+console.log(minMax([1]))
+console.log(minMax([]))
 
 /**
  *  連番
@@ -199,6 +250,9 @@ function omitSeq(num) {
  */
 
 function filter(array, num) {
+
+
+
 }
 
 
