@@ -7,15 +7,26 @@
  *
  */
 
+// function getPersonObject() {
+//   const obj1 = {
+//     name: 'Bob',
+//     age: 32,
+//     gender: 'male'
+//   }
+//   return obj1;
+// }
+
+// answer
+
 function getPersonObject() {
-  const obj1 = {
+  return {
     name: 'Bob',
     age: 32,
     gender: 'male'
   }
-  return obj1;
 }
-console.log(getPersonObject())
+
+// console.log(getPersonObject())
 
 /**
  *  6.2 下記データAが引数で与えられた場合にデータBに書き換える関数を実装してください。
@@ -31,19 +42,24 @@ console.log(getPersonObject())
  *
  */
 
+// function mutateObject(person) {
+//   let obj2 = {
+//     name: 'Mary',
+//     age: 37,
+//     gender: 'female'
+//   }
+//   const obj3 = Object.assign(person, obj2)
+//   return obj3
+// }
+
+// console.log(mutateObject(getPersonObject()))
+
 function mutateObject(person) {
-  let obj2 = {
-    name: 'Mary',
-    age: 37,
-    gender: 'female'
-  }
-  const obj3 = Object.assign(person, obj2)
-  return obj3
+  person.name = 'Mary';
+  person.age = 37;
+  person.gender = 'female';
+  return person;
 }
-
-console.log(mutateObject(getPersonObject()))
-
-
 
 
 /**
@@ -67,14 +83,25 @@ console.log(mutateObject(getPersonObject()))
  *
  */
 
-function assignNumber(persons) {
-  for(let i = 0; i < persons.length; i++) {
-    let person = new Object();
-    person.name = persons[i]
-    person.num = "[" + Math.floor(((Math.random() * 10 )+ 1)) + "]"
-    return person
-  }
-}
+ //answer
+
+ function assignNumber(persons) {
+   let obj = {};
+   for(let i=0; i < persons.length; i++) {
+     const random = Math.floor((Math.random() * 10) + 1);
+     obj[persons[i]] = random;
+   }
+   return obj;
+ }
+
+// function assignNumber(persons) {
+//   for(let i = 0; i < persons.length; i++) {
+//     let person = new Object();
+//     person.name = persons[i]
+//     person.num = "[" + Math.floor(((Math.random() * 10 )+ 1)) + "]"
+//     return person
+//   }
+// }
 console.log(assignNumber(['Bob', 'Mary', 'Ann', 'Mike']))
 
 /**
@@ -89,11 +116,17 @@ console.log(assignNumber(['Bob', 'Mary', 'Ann', 'Mike']))
  */
 
 function isDuplicate(array) {
-  let nums = new Array(array)
-  
+  numMap = {};
+  for(let i=0; i < array.length; i++) {
+    if(numMap[array[i]]) {
+      return true;
+    }
+    numMap[array[i]] = true;
+  }
+  return false;
 }
 
-console.log(isDuplicate([1,2,3]))
+// console.log(isDuplicate([1,2,3]))
 
 module.exports = {
   getPersonObject,
