@@ -18,9 +18,18 @@ function sumSequence (n, sum = 0) {
   }
 }
 
+// answer 
+// function sumSequence (n, sum = 0) {
+//   if(n === 0) {
+//     return sum
+//   }
+
+//   return sumSequence(n-1, sum + n)
+// }
 
 console.log(sumSequence(3))
 console.log(sumSequence(10))
+console.log(sumSequence(30))
 
 /**
  *  フィボナッチ数
@@ -33,6 +42,16 @@ console.log(sumSequence(10))
  */
 
 function fibonacci (num, index = 0, array = []) {
+  if(num == 0) {
+    return array
+  }
+
+  if(index === 0 || index === 1) {
+    array.push(1)
+    fibonacci(num - 1, index + 1, array)
+  }
+  array.push(array[index - 2] + array[index - 1])
+  return fibonacci(num - 1, index + 1, array)
 }
 
 

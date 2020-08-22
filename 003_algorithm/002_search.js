@@ -11,7 +11,15 @@
  *    [5, 3, 2, 1], 6 => -1
  */
 
+ //　リニアサーチ：配列を直線的に探す→　値をひとつひとつ調べていくため、データが大量になると時間がかかる
+
 function linearSearch (array, target) {
+  for(let i=0; i < array.length; i++) {
+    if(array[i] === target) {
+      return i;
+    }
+  }
+  return -1
 }
 
 /**
@@ -24,7 +32,10 @@ function linearSearch (array, target) {
  *    [1, 2, 3, 4] 5 => -1
  */
 
+ //　バイナリーサーチ：調べる範囲を半分に絞りながら探す方法
+
 function binarySearch (array, target) {
+  
 }
 
 module.exports = {

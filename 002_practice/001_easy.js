@@ -11,15 +11,39 @@
  *
  */
 
-function length(str) {
-  // if(str === undefined) {
-  //   return 0
-  // } else {
-  //     return str.length
-  //   }
+ function length(str) {
+   let length = 0;
+
+   for(let i = 0; i < str.length; i++) {
+     length = i;
+   }
+
+   return length;
+ }
+
+//  console.log(length("banana"))
+
+ // answer 
+//  function length(str) {
+//    let length = 0;
+
+//    while(str[length]) {
+//      length++;
+//    }
+
+//    return length;
+
+//  }
+
+// function length(str) {
+//   // if(str === undefined) {
+//   //   return 0
+//   // } else {
+//   //     return str.length
+//   //   }
   
   
-}
+// }
 
 console.log(length(""))
 console.log(length("banana"))
@@ -224,7 +248,14 @@ console.log(minMax([]))
  */
 
 function seq(num) {
+  const res = []
+  for(let i=0; i < num; i++) {
+    res.push(i)
+  }
+  return res;
 }
+
+// console.log(seq(5))
 
 /**
  *  奇数の連番
@@ -239,7 +270,14 @@ function seq(num) {
  */
 
 function omitSeq(num) {
+  const omit = []
+  for(let i=1; i <= num; i = i + 2) {
+    omit.push(i)
+  }
+  return omit
 }
+
+console.log(omitSeq(5))
 
 /**
  *  指定された数値以下の配列
@@ -254,12 +292,17 @@ function omitSeq(num) {
  */
 
 function filter(array, num) {
-
-
+  const result = []
+  for(let i = 0; i < array.length; i++) {
+    if(array[i] <= num) {
+      result.push(array[i])
+    }
+  }
+  return result
 
 }
 
-
+console.log(filter([1,2,3,4,8], 2))
 
 /**
  *  Fizz Buzz

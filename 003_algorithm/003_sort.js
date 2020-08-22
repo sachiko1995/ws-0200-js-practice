@@ -35,6 +35,7 @@ console.log(bubbleSort([5, 3, 2, 1]))
  */
 
 function insertSort (array) {
+  
 }
 
 /**
